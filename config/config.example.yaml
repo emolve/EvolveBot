@@ -1,0 +1,9 @@
+app:
+  mode: Dev
+user:
+  loginPath: path_here
+  username: username
+  password: password
+selenium:
+  driverPath: path_here
+  port: 9515
