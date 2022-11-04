@@ -8,5 +8,6 @@ import (
 func Start(config config.Config) {
 	sel := selenium.NewSeleniumControl(config)
 	sel.Login(config)
+	sel.LoadCloudArchive(config)
 
 }
