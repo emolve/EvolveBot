@@ -1,17 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"github.com/emolve/EvolveBot/pkg/config"
-	"github.com/emolve/EvolveBot/pkg/server"
+	"github.com/emolve/EvolveBot/pkg/app_core"
 )
 
 func main() {
-	config := config.GetConfig()
-	fmt.Println("EvolveBot Start.")
-	fmt.Println("App Mode: ", config.App.Mode)
-	server.Start(config)
-
-	forever := make(chan uint)
-	<-forever
+	app, _ := app_core.NewApp()
+	app.Run()
 }
